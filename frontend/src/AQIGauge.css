@@ -1,0 +1,35 @@
+.aqi-gauge-container {
+  width: 280px;
+  margin: 0 auto;
+  background: #1b1f38;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ddd;
+}
+
+.aqi-gauge-svg {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.aqi-details {
+  text-align: center;
+  max-width: 240px;
+}
+
+.aqi-status {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.aqi-description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #aaa;
+}

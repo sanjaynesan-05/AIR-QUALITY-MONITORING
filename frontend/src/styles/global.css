@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Global styles */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background: #1b1d2a;
-  color: #e4e6f0;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -13,7 +12,6 @@ body {
   padding: 40px 20px;
 }
 
-/* Container for entire app */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -55,7 +53,7 @@ h1 {
   font-size: 2.8rem;
   font-weight: 700;
   box-shadow: 0 0 25px #00ffc3;
-  color: #53576e;
+  color: white;
 }
 
 .aqi-label {
@@ -72,27 +70,14 @@ h1 {
   line-height: 1.5;
 }
 
-.alert-box {
-  background-color: #f44336;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 0 12px #ff1744aa;
-  margin-bottom: 20px;
-  animation: pulse 1s infinite alternate;
-}
-
-@keyframes pulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.05); }
-}
-
-/* Grid for metrics */
+/* Grid for 8 metrics */
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  max-height: 480px;
+  overflow-y: auto;
+  padding-right: 8px;
 }
 
 .metric-card {
@@ -103,7 +88,7 @@ h1 {
   transition: 0.3s;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  justify-content: space-between;
 }
 
 .metric-card:hover {
@@ -121,6 +106,7 @@ h1 {
   font-size: 0.85rem;
   color: #a5a9c7;
   margin-bottom: 12px;
+  flex-grow: 1;
 }
 
 .metric-value {
@@ -128,7 +114,7 @@ h1 {
   font-weight: 700;
   color: #fff;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
 }
 
@@ -143,7 +129,7 @@ h1 {
   border-radius: 12px;
   font-weight: 600;
   font-size: 0.8rem;
-  color: #53576e;
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -187,41 +173,6 @@ h1 {
   border-radius: 10px;
 }
 
-/* Charts section */
-.charts-section {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-/* AQI Container with dark background matching main container */
-.aqi-container {
-  width: 220px;
-  padding: 20px;
-  margin: 40px auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  border-radius: 12px;
-  background-color: #282a3a;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  color: #53576e;
-}
-
-/* AQI Status Text */
-.aqi-status {
-  font-weight: 600;
-  margin-top: 10px;
-  color: #000000;
-}
-
-/* AQI Description */
-.aqi-desc {
-  font-size: 0.9rem;
-  margin-top: 6px;
-  color: #9aa0b0;
-}
-
 /* Responsive for tablets and below */
 @media (max-width: 1024px) {
   .metrics-grid {
@@ -241,12 +192,5 @@ h1 {
 
   .aqi-desc {
     max-width: 100%;
-  }
-}
-
-/* Responsive tweaks for smaller phones */
-@media (max-width: 500px) {
-  .metrics-grid {
-    grid-template-columns: 1fr;
   }
 }
