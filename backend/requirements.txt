@@ -1,3 +1,5 @@
 fastapi
-uvicorn
+uvicorn[standard]
 pydantic
+motor  # if using MongoDB async driver
+python-dotenv  # for environment variables
