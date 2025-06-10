@@ -1,0 +1,107 @@
+.metric-card {
+  background: rgba(255 255 255 / 0.09);
+  border-radius: 24px;
+  padding: 24px 28px 28px;
+  color: #d1d9e6;
+  box-shadow:
+    0 0 16px rgb(0 0 0 / 0.3),
+    inset 0 0 10px rgb(255 255 255 / 0.1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  cursor: default;
+  font-family: 'Poppins', sans-serif;
+}
+
+.metric-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 48px rgb(0 0 0 / 0.4),
+    inset 0 0 14px rgb(255 255 255 / 0.15);
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 15px;
+  color: #aad4ffdd;
+}
+
+.status-badge {
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 18px;
+  font-size: 13px;
+  color: #222;
+  user-select: none;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.25);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.status-good {
+  background-color: #4caf50;
+  box-shadow: 0 0 18px #4caf50cc;
+}
+
+.status-moderate {
+  background-color: #ffb300;
+  box-shadow: 0 0 18px #ffb300cc;
+  color: #2f2f2f;
+}
+
+.status-poor {
+  background-color: #f44336;
+  box-shadow: 0 0 18px #f44336cc;
+}
+
+.status-hazardous {
+  background-color: #7e0023;
+  box-shadow: 0 0 18px #7e0023cc;
+  color: #f7c6cb;
+}
+
+.metric-value {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  user-select: text;
+  color: #c9d3e8;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 4px rgba(201, 211, 232, 0.6);
+}
+
+.metric-unit {
+  font-size: 17px;
+  font-weight: 600;
+  color: #a0a9bf;
+  user-select: none;
+  letter-spacing: 0.02em;
+  font-family: 'Inter', sans-serif;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #222733;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  user-select: none;
+  box-shadow: inset 0 2px 5px rgb(255 255 255 / 0.08);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 24px;
+  background: linear-gradient(90deg, #80fb70 0%, #3767f1 100%);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -86,7 +86,7 @@ def get_dashboard_3_data():
 
     metrics = [
         {
-            "title": "Temperature",
+            "title": "Temp",  # Changed from "Temperature"
             "desc": "Ambient Temperature",
             "value": data["temperature"],
             "unit": "°C",
@@ -94,7 +94,7 @@ def get_dashboard_3_data():
             "max": 50
         },
         {
-            "title": "Humidity",
+            "title": "RH",  # Changed from "Humidity"
             "desc": "Relative Humidity",
             "value": data["humidity"],
             "unit": "%",
@@ -142,7 +142,7 @@ def get_dashboard_3_data():
             "max": 50
         },
         {
-            "title": "TVOC",
+            "title": "CH₂O",
             "desc": "Formaldehyde / TVOC",
             "value": data["tvoc"],
             "unit": "ppm",

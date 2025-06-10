@@ -1,35 +1,107 @@
-.aqi-gauge-container {
-  width: 280px;
-  margin: 0 auto;
-  background: #1b1f38;
-  padding: 20px;
+/* Container for the AQI card */
+.aqi-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 800px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Left side gauge container */
+.aqi-gauge-wrapper {
+  flex: 1;
+  max-width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right side AQI detail section */
+.aqi-details {
+  flex: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  color: #ddd;
+  justify-content: center;
 }
 
-.aqi-gauge-svg {
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-.aqi-details {
-  text-align: center;
-  max-width: 240px;
-}
-
-.aqi-status {
-  font-size: 22px;
+/* Main title text */
+.aqi-title {
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
 }
 
-.aqi-description {
-  font-size: 14px;
-  line-height: 1.4;
-  color: #aaa;
+/* AQI status text */
+.aqi-status {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+/* Description text */
+.aqi-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Color codes based on AQI level */
+.aqi-status-good {
+  color: #4caf50; /* Green */
+}
+
+.aqi-status-moderate {
+  color: #ff9800; /* Orange */
+}
+
+.aqi-status-poor {
+  color: #f44336; /* Red */
+}
+
+.aqi-status-hazardous {
+  color: #7e0023; /* Dark Red */
+}
+
+/* SVG gauge styling */
+.aqi-gauge-wrapper svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .aqi-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .aqi-gauge-wrapper {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .aqi-details {
+    width: 100%;
+  }
+
+  .aqi-title {
+    font-size: 1.5rem;
+  }
+
+  .aqi-status {
+    font-size: 1.25rem;
+  }
+
+  .aqi-desc {
+    font-size: 0.95rem;
+  }
 }
