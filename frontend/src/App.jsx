@@ -5,7 +5,7 @@ import "./styles/global.css";
 
 const API_URL = "http://127.0.0.1:8000/data/dashboard_3";
 
-// Format "Last updated"
+// Helper to show relative time
 function timeAgo(datetime) {
   const diff = Math.floor((Date.now() - new Date(datetime)) / 1000);
   if (diff < 60) return "Just now";
@@ -14,7 +14,7 @@ function timeAgo(datetime) {
   return new Date(datetime).toLocaleString();
 }
 
-// AQI Status function
+// AQI status mapping
 function getStatusInfo(value) {
   const num = Number(value);
   if (isNaN(num)) return { label: "Unknown", color: "#9e9e9e", emoji: "❓" };
@@ -51,25 +51,39 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  if (loading || error || !data || data.error) {
+  if (loading)
     return (
       <div className="scale-wrapper">
         <div className="container">
           <h1>Indoor Air Quality Dashboard</h1>
-          <p style={{ color: error ? "red" : "#fff" }}>
-            {loading
-              ? "Loading data..."
-              : error
-              ? `Error: ${error}`
-              : "No data available"}
-          </p>
+          <p>Loading data...</p>
         </div>
       </div>
     );
-  }
+
+  if (error)
+    return (
+      <div className="scale-wrapper">
+        <div className="container">
+          <h1>Indoor Air Quality Dashboard</h1>
+          <p style={{ color: "red" }}>Error: {error}</p>
+        </div>
+      </div>
+    );
+
+  if (!data || data.error)
+    return (
+      <div className="scale-wrapper">
+        <div className="container">
+          <h1>Indoor Air Quality Dashboard</h1>
+          <p>No data available</p>
+        </div>
+      </div>
+    );
 
   const aqiInfo = getStatusInfo(data.aqi_value);
   const rawMetrics = data.metrics || [];
+
   const metrics = rawMetrics.map((metric) => {
     if (metric.title === "temperature") {
       return { ...metric, title: "temp" };
@@ -80,11 +94,11 @@ export default function App() {
     return metric;
   });
 
-  const filledMetrics = [...metrics];
-  while (filledMetrics.length < 8) {
-    filledMetrics.push({ title: "N/A", value: 0, unit: "", max: 100 });
+  while (metrics.length < 8) {
+    metrics.push({ title: "N/A", value: 0, unit: "", max: 100 });
   }
-  const displayedMetrics = filledMetrics.slice(0, 8);
+
+  const displayedMetrics = metrics.slice(0, 8);
 
   return (
     <div className="scale-wrapper">
@@ -94,7 +108,7 @@ export default function App() {
           <h1>Indoor Air Quality Dashboard</h1>
         </div>
 
-        {/* Warning Banner */}
+        {/* Alert Banner */}
         <AnimatePresence>
           {["Poor", "Very Poor", "Severe"].includes(aqiInfo.label) && (
             <motion.div
@@ -108,12 +122,13 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        {/* Top Info Row */}
+        {/* Info Row */}
         <div className="info-row centered-info">
           <div className="left-info">
             <span className="live-indicator" />
             Last updated: {timeAgo(data.datetime)}
           </div>
+
           <div className="logo-center">
             <img
               src="https://airvue.live/assets/images/logo_4.png"
@@ -121,6 +136,7 @@ export default function App() {
               className="info-logo"
             />
           </div>
+
           <div className="right-info">📍 Exhibition Hall</div>
         </div>
 
