@@ -65,14 +65,6 @@ npm install
 npm run dev
 ```
 
----
-
-## 🌍 Live Location (Coimbatore, Tamil Nadu)
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.4125485427117!2d76.95530727480493!3d11.016844792154399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859be3f7ddcff%3A0xafe385bdb4364b2!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1718710834012!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
----
-
 ## 📂 Folder Structure
 
 ```
@@ -91,19 +83,6 @@ AIR-QUALITY-MONITORING/
 │   └── tailwind.config.js
 └── README.md
 ```
-
----
-
-## 🛠️ Roadmap
-
-- [x] Animated AQI Gauge
-- [x] Responsive Layout
-- [x] Email Alerts for AQI breaches
-- [ ] Live Chart for every parameter
-- [ ] Device Selection Panel
-- [ ] Admin & User Login
-
----
 
 ## 🤝 Contribution
 
