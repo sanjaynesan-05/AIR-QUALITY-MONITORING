@@ -3,6 +3,11 @@
 A responsive, real-time indoor **Air Quality Monitoring Dashboard** built with **React**, **Tailwind CSS**, **Framer Motion**, and **FastAPI**. The system collects air quality data from MongoDB and dynamically displays it through beautifully designed metric cards and animated AQI gauges.
 
 ---
+## 📸 Dashboard Preview
+
+![Dashboard Preview](https://raw.githubusercontent.com/sanjaynesan-05/AIR-QUALITY-MONITORING/main/dashboard.png)
+---
+---
 
 ## 📦 Tech Stack
 
