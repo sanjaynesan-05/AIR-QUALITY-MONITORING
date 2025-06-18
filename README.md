@@ -6,18 +6,22 @@ A responsive, real-time indoor **Air Quality Monitoring Dashboard** built with *
 
 ## 📦 Tech Stack
 
-### Frontend
-- **React.js** (with Hooks)
-- **Tailwind CSS** – utility-first styling with glassmorphism + glow
-- **Framer Motion** – for smooth animations
-- **Chart.js / Recharts** – for visual parameter trends
-- **Heroicons / Lucide** – for modern icons
+### 🌐 Frontend
 
-### Backend
-- **FastAPI** – Python-based RESTful API
-- **MongoDB Atlas** – cloud NoSQL database
-- **Pymongo** – MongoDB client for Python
-- **FastMail** – for alert-based email notifications
+[![React](https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-EF008F?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-F5788D?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
+[![Recharts](https://img.shields.io/badge/Recharts-FF7448?style=for-the-badge&logo=recharts&logoColor=white)](https://recharts.org/)
+[![Heroicons](https://img.shields.io/badge/Heroicons-000000?style=for-the-badge&logo=heroicons&logoColor=white)](https://heroicons.com/)
+[![Lucide](https://img.shields.io/badge/Lucide-000000?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
+
+### ⚙️ Backend
+
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![MongoDB Atlas](https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/cloud/atlas)
+[![Pymongo](https://img.shields.io/badge/PyMongo-306998?style=for-the-badge&logo=python&logoColor=white)](https://pymongo.readthedocs.io/)
 
 ---
 
